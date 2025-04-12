@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <title>Your Cart</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><!--external library used: https://cdnjs.com/libraries/font-awesome -->
   <style>
+  /* (OpenAI, 2025). The syntax and structure of the code below was AI generated; many modifications of the positioning, size and colour were made by our group*/
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f8f8;
@@ -122,13 +122,16 @@
       border-radius: 8px;
       cursor: pointer;
     }
+    /* (OpenAI, 2025). End of citation*/
   </style>
 </head>
 <body>
-  <img src="coc-logo.svg" alt="Calgary Logo">
+
+  <img src="coc-logo.svg">
   <h1>Your Cart</h1>
   <h2>Your Cart Items are Shown Below</h2>
 
+    <!-- (OpenAI, 2025). The syntax and structure of the code below was AI generated. We decided on the button names and where the buttons link to. -->
   <div id="cartItemsContainer">
 
   </div>
@@ -153,6 +156,7 @@
       <i class="fas fa-question-circle"></i>
     </button>
   </div>
+   <!-- (OpenAI, 2025). End of citation -->
   
 
   <!-- When pressing the guide pop up gives instructions -->
@@ -183,6 +187,8 @@
       <li><strong>Groups:</strong> Can purchase multiple tickets in one session.</li>
     <button onclick = "closeGuide()"> Close</button>  <!-- (OpenAI, 2025)-->
   </div>
+
+    <!-- (OpenAI, 2025). The script below -->
   <script>
     const ticketType = sessionStorage.getItem('ticketType') || 'single';
     const prices = {
@@ -257,5 +263,6 @@
 
     renderCartItems();
   </script>
+    <!-- (OpenAI, 2025). End of citation -->
 </body>
 </html>

@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <title>Select Pass Type</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--external library used: https://cdnjs.com/libraries/font-awesome -->
   <style>
+
+/* (OpenAI, 2025). The syntax and structure of the code below was AI generated; many modifications of the positioning, size and colour were made by our group*/
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f5f5f5;
@@ -12,7 +14,6 @@
       margin: 0;
       padding: 0;
     }
-
     img {
       width: 300px;
       margin-bottom: 10px;
@@ -21,7 +22,6 @@
     h1 {
       margin-top: 20px;
     }
-
     .container {
       display: flex;
       flex-direction: column;
@@ -117,15 +117,17 @@
       font-weight: bold;
       font-style: italic;
     }
+    /* (OpenAI, 2025). End of citation*/
   </style>
 </head>
 <body>
 
   <div style="text-align: center;">
-    <img src="coc-logo.svg" alt="Calgary Transit Logo">
+    <img src="coc-logo.svg" />
     <h1>Select Pass Type</h1>
   </div>
 
+  <!-- (OpenAI, 2025). The syntax and structure of the code below was AI generated. We decided on the button names and where the buttons link to.-->
   <div class="container">
     <a class="link-button" href="User_Group_for_Pass.html" onclick="savePassType('daily')"><em>Day</em> Pass</a>
     <a class="link-button" href="User_Group_for_Pass.html" onclick="savePassType('monthly')"><em>Monthly</em> Pass</a>
@@ -133,9 +135,6 @@
   </div>
 
   <div class="divider"></div>
-
-
-
   <div class="btn-group">
     <a href="Purchase_Ticket_or_Pass.html" class="btn-icon" title="Back">
       <i class="fas fa-arrow-left"></i>
@@ -148,7 +147,7 @@
     </button>
   </div>
   </main>
-  
+  <!-- (OpenAI, 2025). End of citation -->
 
   <!-- When pressing the guide pop up gives instructions -->
   <div id="guidePopup"> 
@@ -179,7 +178,7 @@
     <button onclick = "closeGuide()"> Close</button>  <!-- (OpenAI, 2025)-->
   </div>
 
-  
+  <!-- (OpenAI, 2025). The script below -->
   <script>
     function openGuide() {
       document.getElementById('guidePopup').style.display = 'block';
@@ -191,6 +190,7 @@
       sessionStorage.setItem('passType', type);
     }
   </script>
+   <!-- (OpenAI, 2025). End of citation -->
 
 </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Select User Group</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Select Tickets</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /><!--external library used: https://cdnjs.com/libraries/font-awesome -->
   <style>
+
+    /* (OpenAI, 2025). The syntax and structure of the code below was AI generated; many modifications of the positioning, size and colour were made by our group*/
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f7f7f7;
@@ -164,34 +165,17 @@
       border-radius: 8px;
       cursor: pointer;
     }
+       /* (OpenAI, 2025). End of citation*/
 
 
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      .label-text {
-        font-size: 18px;
-        min-width: 180px;
-      }
-
-      .btn-circle {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-      }
-
-      .action-btn {
-        width: 100%;
-        justify-content: center;
-      }
-    }
   </style>
 </head>
 <body>
 <div class="container">
-  <img src="coc-logo.svg" alt="City of Calgary Logo">
+  <img src="coc-logo.svg">
   <h1>Select Tickets</h1>
-  
-  <!-- Add error message div below the heading -->
+
+  <!-- (OpenAI, 2025). The syntax and structure of the code below was AI generated. We decided on the user group text, the button names, and where the buttons link to. -->
   <div id="errorMessage" style="color: red; font-size: 18px; margin: 10px 0; display: none;">
     Please select at least one ticket before proceeding to cart.
   </div>
@@ -225,8 +209,8 @@
       <button class="btn-circle plus">+</button>
     </div>
   </div>
-  
 
+  
   <div id="totalAmount" class="total">Total Amount: $0.00</div>
 
   <div class="btn-action-group">
@@ -247,6 +231,8 @@
   </button>
 </div>
 </main>
+  <!-- (OpenAI, 2025). End of citation -->
+
 
   <!-- When pressing the guide pop up gives instructions -->
   <div id="guidePopup"> 
@@ -277,7 +263,7 @@
     <button onclick = "closeGuide()"> Close</button>  <!-- (OpenAI, 2025)-->
   </div>
 
-<!-- JS Logic -->
+  <!-- (OpenAI, 2025). The script below -->
 <script>
   const prices = {
     single: {
@@ -312,7 +298,7 @@
     });
 
     document.getElementById('totalAmount').textContent = `Total Amount: $${total.toFixed(2)}`;
-    // Store the current state
+   
     sessionStorage.setItem('ticketCounts', JSON.stringify(counts));
     sessionStorage.setItem('totalAmount', total.toFixed(2));
   }
@@ -335,7 +321,7 @@
 
     document.getElementById('errorMessage').style.display = 'none';
 
-    // Store the current selections in cart storage
+ 
     sessionStorage.setItem('ticketCountsCart', JSON.stringify(counts));
     sessionStorage.setItem('totalTicketAmountCart', document.getElementById('totalAmount').textContent.split('$')[1]);
 
@@ -348,9 +334,9 @@
     }
   }
 
-  // Load saved values when the page loads
+  
   window.addEventListener('DOMContentLoaded', () => {
-    // Try to load from cart storage first
+
     let savedCounts = JSON.parse(sessionStorage.getItem('ticketCountsCart'));
     let total = parseFloat(sessionStorage.getItem('totalTicketAmountCart'));
 
@@ -367,10 +353,10 @@
         }
     }
     
-    updateTotalAmountLabel(); // Update the total after loading saved values
+    updateTotalAmountLabel(); 
   });
 
-  // Update the button event listeners
+
   document.querySelectorAll('.btn-group-2').forEach(group => {
     const quantityEl = group.querySelector('.quantity');
     const minusBtn = group.querySelector('.minus');
@@ -404,6 +390,7 @@
   
   updateTotalAmountLabel();
 </script>
+  <!-- (OpenAI, 2025). End of citation -->
 
 </body>
 </html>

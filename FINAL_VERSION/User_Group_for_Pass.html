@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
   <title>Select Pass</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /><!--external library used: https://cdnjs.com/libraries/font-awesome -->
   <style>
+    /* (OpenAI, 2025). The syntax and structure of the code below was AI generated; many modifications of the positioning, size and colour were made by our group*/
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f5f5f5;
@@ -175,33 +175,16 @@
       border-radius: 8px;
       cursor: pointer;
     }
-
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      .label-text {
-        font-size: 18px;
-        min-width: 180px;
-      }
-
-      .btn-circle {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-      }
-
-      .action-btn {
-        width: 100%;
-        justify-content: center;
-      }
-    }
+ /* (OpenAI, 2025). End of citation*/
   </style>
 </head>
 <body>
+
+<!-- (OpenAI, 2025). The syntax and structure of the code below was AI generated.  We decided on the calgary logo, headers, user group text, the button names and where the buttons link to. -->
 <div class="container">
   <img src="coc-logo.svg" alt="City of Calgary Logo">
   <h1>Select Pass</h1>
   
-  <!-- Add error message div below the heading -->
   <div id="errorMessage" style="color: red; font-size: 18px; margin: 10px 0; display: none;">
     Please select at least one pass before proceeding to cart.
   </div>
@@ -241,7 +224,6 @@
 
   <div class="btn-action-group">
     <a class="action-btn" href="#" onclick="handleAddToCart()"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
-    <!-- <a class="action-btn" href="#" onclick="handleCheckout()"><i class="fa-solid fa-credit-card"></i> Pay</a> -->
   </div>
 
   <hr>
@@ -258,6 +240,8 @@
     </button>
   </div>
 </div>
+
+  <!-- (OpenAI, 2025). End of citation -->
 
 
   <!-- When pressing the guide pop up gives instructions -->
@@ -286,10 +270,10 @@
       <li><strong>Students:</strong> 
         Enter student ID for discounts after pressing + on student.</li>
       <li><strong>Groups:</strong> Can purchase multiple tickets in one session.</li>
-    <button onclick = "closeGuide()"> Close</button>  <!-- (OpenAI, 2025) in this line-->
+    <button onclick = "closeGuide()"> Close</button>  <!-- (OpenAI, 2025)-->
   </div>
 
-<!-- JS Logic -->
+<!-- (OpenAI, 2025). The script below -->
 <script>
   const passPrices = {
     daily: {
@@ -329,7 +313,6 @@
 
   function updateTotalAmountLabel() {
     let total = 0;
-    // Retrieve passCounts from sessionStorage or default to an empty object
     const counts = {};
 
     document.querySelectorAll('.btn-group-2').forEach(group => {
@@ -368,24 +351,20 @@
   });
 
   function handleAddToCart() {
-    // Check if any passes are selected
     let totalQuantity = 0;
     document.querySelectorAll('.btn-group-2').forEach(group => {
         totalQuantity += parseInt(group.querySelector('.quantity').textContent);
     });
 
     if (totalQuantity === 0) {
-        // Show error message instead of alert
         document.getElementById('errorMessage').style.display = 'block';
         return;
     }
 
-    // Hide error message if passes are selected
     document.getElementById('errorMessage').style.display = 'none';
 
     const studentCount = parseInt(document.querySelector('.row-3 .quantity').textContent);
     if (studentCount > 0) {
-        // Store current pass counts and total in sessionStorage
         const counts = {};
         document.querySelectorAll('.btn-group-2').forEach(group => {
             const row = Array.from(group.classList).find(c => c.startsWith("row-"));
@@ -395,14 +374,12 @@
         sessionStorage.setItem('pendingPassCounts', JSON.stringify(counts));
         sessionStorage.setItem('pendingTotalPassAmount', document.getElementById('totalAmount').textContent.split('$')[1]);
         
-        // Redirect to student verification
         window.location.href = "Student_Verification.html";
     } else {
         window.location.href = "Pass_Cart.html";
     }
   }
 
-  // Add this to hide error message when user starts selecting passes
   document.querySelectorAll('.btn-circle').forEach(button => {
     button.addEventListener('click', () => {
         document.getElementById('errorMessage').style.display = 'none';
@@ -416,7 +393,6 @@
   function closeGuide() {
     document.getElementById('guidePopup').style.display = 'none';
   }
-  // Load values from sessionStorage on page load
   window.addEventListener('DOMContentLoaded', () => {
     const savedCounts = JSON.parse(sessionStorage.getItem('passCountsCart'));
     const total = parseFloat(sessionStorage.getItem('totalPassAmountCart')) || 0;
@@ -431,11 +407,11 @@
         }
         document.getElementById('totalAmount').textContent = `Total Amount: $${total.toFixed(2)}`;
     }
-    updateTotalAmountLabel(); // Update the total after loading saved values
+    updateTotalAmountLabel(); 
   });
-  // Initial
   updateTotalAmountLabel();
 </script>
+  <!-- (OpenAI, 2025). End of citation -->
 
 </body>
 </html>

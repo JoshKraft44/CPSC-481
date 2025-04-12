@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
   <title>Select Payment Method</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /><!--external library used: https://cdnjs.com/libraries/font-awesome -->
   <style>
+    /* (OpenAI, 2025). The syntax and structure of the code below was AI generated; many modifications of the positioning, size and colour were made by our group*/
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
@@ -146,13 +146,16 @@
         width: 80%;
       }
     }
+    /* (OpenAI, 2025). End of citation*/
+
   </style>
 </head>
 <body>
 
-  <img src="coc-logo.svg" alt="City of Calgary Logo">
+  <img src="coc-logo.svg">
   <h1>Select a Payment Method</h1>
 
+  <!-- (OpenAI, 2025). The syntax and structure of the code below was AI generated. We decided on the button names and where the buttons link to. -->
   <div class="container">
     <a class="link-button" href="Complete_Credit_Payment.html">
       <i class="fa-solid fa-credit-card"></i>
@@ -178,6 +181,8 @@
       <i class="fas fa-question-circle"></i>
     </button>
   </div>
+    <!-- (OpenAI, 2025). End of citation -->
+
 
     <!-- When pressing the guide pop up gives instructions -->
     <div id="guidePopup"> 
@@ -208,6 +213,7 @@
       <button onclick = "closeGuide()"> Close</button>  <!-- (OpenAI, 2025)-->
     </div>
 
+  <!-- (OpenAI, 2025). The script below.-->
   <script>
     const ticketBool = sessionStorage.getItem('ticket_bool');
     const passBool = sessionStorage.getItem('pass_bool');
@@ -231,6 +237,7 @@
       document.getElementById('guidePopup').style.display = 'none';
     }
   </script>
+  <!-- (OpenAI, 2025). End of citation -->
 
 </body>
 </html>

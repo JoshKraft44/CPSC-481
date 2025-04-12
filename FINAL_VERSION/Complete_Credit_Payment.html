@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Complete Payment</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /><!--external library used: https://cdnjs.com/libraries/font-awesome -->
   <style>
+    /* (OpenAI, 2025). The syntax and structure of the code below was AI generated; many modifications of the positioning, size and colour were made by our group*/
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -153,9 +153,13 @@
       .btn { font-size: 16px; padding: 12px 20px; }
       .images img { max-width: 180px; }
     }
+    /* (OpenAI, 2025). End of citation*/
+
   </style>
 </head>
 <body>
+
+    <!-- (OpenAI, 2025). The syntax and structure of the code below was AI generated. We decided on the calgary logo, header, button names and where the buttons link to. -->
   <div class="container">
     <img class="logo" src="coc-logo.svg" alt="Calgary Logo" />
 
@@ -189,7 +193,10 @@
 
     </div>
   </div>
+  <!-- (OpenAI, 2025). End of citation -->
 
+
+  <!-- (OpenAI, 2025). The script below -->
   <script>
     
     const purchaseType = sessionStorage.getItem('purchaseType'); // 'ticket' or 'pass'
@@ -209,5 +216,7 @@
     
     document.getElementById("totalCost").textContent = `$${parseFloat(total).toFixed(2)}`;
   </script>
+  <!-- (OpenAI, 2025). End of citation -->
+
 </body>
 </html>

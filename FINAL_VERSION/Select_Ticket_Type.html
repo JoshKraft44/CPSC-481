@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Purchase Type</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Select Ticket Type</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><!--external library used: https://cdnjs.com/libraries/font-awesome -->
   <style>
+  /* (OpenAI, 2025). The syntax and structure of the code below was AI generated; many modifications of the positioning, size and colour were made by our group*/
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -113,6 +112,8 @@
       height: 1px;
       background-color: #aaa;
     }
+
+      /* (OpenAI, 2025). End of citation*/
   </style>
 </head>
 <body>
@@ -120,10 +121,10 @@
   
 
   <div style="text-align: center;">
-    <img src="coc-logo.svg" alt="Calgary Transit Logo" />
+    <img src="coc-logo.svg" />
     <h1>Select Ticket Type</h1>
   </div>
-
+  <!-- (OpenAI, 2025). The syntax and structure of the code below was AI generated. We decided on the button names and where the buttons link to. -->
   <div class="container">
     <a class="link-button" href="Select_User_Group_Ticket.html" onclick="setTicketType('single')"><b>Single Use</b> Ticket</a>
     <a class="link-button" href="Select_User_Group_Ticket.html" onclick="setTicketType('roundTrip')"><b>Round Trip</b> Ticket</a>
@@ -142,6 +143,7 @@
       <i class="fas fa-question-circle"></i>
     </button>
   </div>
+    <!-- (OpenAI, 2025). End of citation -->
 
   <!-- When pressing the guide pop up gives instructions -->
   <div id="guidePopup"> 
@@ -171,8 +173,11 @@
       <li><strong>Groups:</strong> Can purchase multiple tickets in one session.</li>
     <button onclick = "closeGuide()"> Close</button>  <!-- (OpenAI, 2025)-->
   </div>
+
+    <!-- (OpenAI, 2025). The script below -->
   <script>
     
+  
     const totalAmount = sessionStorage.getItem('totalAmount');
     
     function setTicketType(type) {
@@ -186,6 +191,7 @@
       document.getElementById('guidePopup').style.display = 'none';
     }
   </script>
+    <!-- (OpenAI, 2025). End of citation -->
 
 </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <title>Insert Transit Card</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /><!--external library used: https://cdnjs.com/libraries/font-awesome -->
   <style>
+    /* (OpenAI, 2025). The syntax and structure of the code below was AI generated; many modifications of the positioning, size and colour were made by our group*/
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f5f5f5;
@@ -113,15 +114,17 @@
         }
 
 
-  
+  /* (OpenAI, 2025). End of citation*/
 
     </style>
 </head>
 <body>
     <header>
-        <img src="coc-logo.svg" alt="Calgary Logo" />
+        <img src="coc-logo.svg"/>
         <h1>Insert Transit Card to Reload</h1>
     </header>
+
+  <!-- (OpenAI, 2025). The syntax and structure of the code below was AI generated. We decided on the button names and where the buttons link to. -->  
 <a id="card-btn" href="Payment_Methods.html" style="text-decoration: none;">
 <div class="container">
 <img src="transit_card.png" style="align-items: center; width: 300px;"/>
@@ -142,6 +145,8 @@
       <i class="fas fa-question-circle"></i>
     </button>
   </div>
+    <!-- (OpenAI, 2025). End of citation -->
+
 
     <!-- When pressing the guide pop up gives instructions -->
     <div id="guidePopup"> 
@@ -172,6 +177,7 @@
       <button onclick = "closeGuide()"> Close</button>  <!-- (OpenAI, 2025)-->
     </div>
 
+<!-- (OpenAI, 2025). The script below -->
 <script>
     document.getElementById('card-btn').addEventListener('click', function () {
       sessionStorage.setItem('pass_bool', 'false');
@@ -186,5 +192,7 @@
         document.getElementById('guidePopup').style.display = 'none';
     }
     </script>
+  <!-- (OpenAI, 2025). End of citation -->
+
 </body>
 </html>
